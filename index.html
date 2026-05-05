@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta property="og:title" content="Shaheer & Thaskina — Wedding Invitation">
+    <meta property="og:title" content="Ameen Fayiz & Ayisha Ziya — Wedding Invitation">
     <meta property="og:image" content="https://nafih424.github.io/shaheer-wedding/thumbnail.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaheer & Thaskina — Wedding Invitation</title>
+    <title>Ameen Fayiz & Ayisha Ziya — Wedding Invitation</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"
         rel="stylesheet">
@@ -1475,38 +1475,31 @@
         // CONFIGURATION: Change these details easily
         const WEDDING_DATA = {
             groom: {
-                firstName: "Shaheer",
-                lastName: "M",
-                father: "Mohammed Ali. M",
-                mother: "Jameela. T",
-                house: "Maruthayil House",
-                location: "Alungal",
-                siblings: [
-                    "Abdul Varis. M & Safareena",
-                    "Abdul Latheer. M & Henna Faize",
-                    "Mufeeda. M & Jafar"
-                ]
+                firstName: "Ameen Fayiz",
+                lastName: "",
+                father: "Mr. Abdul Azeez. M",
+                mother: "Mrs. Nafeesa. A",
+                house: "",
+                location: "",
+                siblings: []
             },
             bride: {
-                firstName: "Thaskina",
-                lastName: "K.P",
-                father: "Ummer. K.P",
-                mother: "Souda. K",
-                house: "Aruvathodi House",
-                location: "VELIMUKKU",
-                siblings: [
-                    "Thashmeer. K. P & Hasnath",
-                    "Thabshira. K. P & Arshad"
-                ]
+                firstName: "Ayisha Ziya",
+                lastName: "",
+                father: "Mr. Noushad",
+                mother: "Mrs. Jaseena",
+                house: "",
+                location: "Chenakkalangadi",
+                siblings: []
             },
             event: {
-                dateShort: "MAY 14 · 2026",
-                dateFull: "14th May,Thursday - 2026",
-                dateSimple: "14TH MAY 2026",
+                dateShort: "MAY 11 · 2026",
+                dateFull: "Monday, 11th May 2026",
+                dateSimple: "11TH MAY 2026",
                 time: "12:00 PM onwards",
-                venue: "Century Auditorium, Chelari",
-                location: "Chelari, Malappuram",
-                mapLink: "https://maps.app.goo.gl/wuUqFNsG5VEg1XSZ8",
+                venue: "KKM Auditorium, Chenakkalangadi",
+                location: "Chenakkalangadi",
+                mapLink: "https://www.google.com/maps/search/?api=1&query=KKM+Auditorium+Chenakkalangadi",
                 musicFile: "song.mp3",
                 musicStart: 53
             }
@@ -1524,19 +1517,19 @@
             document.getElementById('hero-groom').textContent = WEDDING_DATA.groom.firstName;
             document.getElementById('hero-bride').textContent = WEDDING_DATA.bride.firstName;
             document.getElementById('hero-date').textContent = WEDDING_DATA.event.dateShort;
-            document.getElementById('hero-location').textContent = WEDDING_DATA.event.location;
+            document.getElementById('hero-location').textContent = WEDDING_DATA.event.venue;
 
             // Envelope Card
             document.querySelector('.letter-text').innerHTML = `${WEDDING_DATA.groom.firstName} & ${WEDDING_DATA.bride.firstName}`;
 
             // Families
-            document.getElementById('fam-groom-name').textContent = `${WEDDING_DATA.groom.firstName} .${WEDDING_DATA.groom.lastName}`;
+            document.getElementById('fam-groom-name').textContent = WEDDING_DATA.groom.lastName ? `${WEDDING_DATA.groom.firstName} .${WEDDING_DATA.groom.lastName}` : WEDDING_DATA.groom.firstName;
             document.getElementById('fam-groom-house').textContent = WEDDING_DATA.groom.house;
             document.getElementById('fam-groom-father').textContent = WEDDING_DATA.groom.father;
             document.getElementById('fam-groom-mother').textContent = WEDDING_DATA.groom.mother;
             document.getElementById('fam-groom-siblings').innerHTML = WEDDING_DATA.groom.siblings.join('<br>');
 
-            document.getElementById('fam-bride-name').textContent = `${WEDDING_DATA.bride.firstName} .${WEDDING_DATA.bride.lastName}`;
+            document.getElementById('fam-bride-name').textContent = WEDDING_DATA.bride.lastName ? `${WEDDING_DATA.bride.firstName} .${WEDDING_DATA.bride.lastName}` : WEDDING_DATA.bride.firstName;
             document.getElementById('fam-bride-house').textContent = WEDDING_DATA.bride.house;
             document.getElementById('fam-bride-father').textContent = WEDDING_DATA.bride.father;
             document.getElementById('fam-bride-mother').textContent = WEDDING_DATA.bride.mother;
@@ -1552,9 +1545,9 @@
             document.getElementById('final-names').textContent = `${WEDDING_DATA.groom.firstName} & ${WEDDING_DATA.bride.firstName}`;
             document.getElementById('final-date').textContent = WEDDING_DATA.event.dateSimple;
             document.getElementById('final-footer').innerHTML = `
-                ${WEDDING_DATA.groom.house.toUpperCase()} <span>·</span> 
-                ${WEDDING_DATA.bride.house.toUpperCase()} <span>·</span> 
-                ${WEDDING_DATA.groom.location.toUpperCase()} & ${WEDDING_DATA.bride.location.toUpperCase()}
+                ${WEDDING_DATA.groom.house ? WEDDING_DATA.groom.house.toUpperCase() + ' <span>·</span>' : ''} 
+                ${WEDDING_DATA.bride.house ? WEDDING_DATA.bride.house.toUpperCase() + ' <span>·</span>' : ''} 
+                ${WEDDING_DATA.groom.location ? WEDDING_DATA.groom.location.toUpperCase() + ' & ' : ''} ${WEDDING_DATA.bride.location.toUpperCase()}
             `;
         }
 
