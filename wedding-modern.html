@@ -10,10 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Satisfy&display=swap" rel="stylesheet">
     <style>
         :root {
-            --navy-deep: #050a18;
-            --navy-rich: #0c1427;
-            --gold: #d4af37;
-            --gold-light: #f9e29c;
+            --navy-deep: #2d141a;
+            --navy-rich: #4a1525;
+            --gold: #c9a96e;
+            --gold-light: #e8d4a0;
             --stardust: rgba(255, 255, 255, 0.8);
             --glass: rgba(255, 255, 255, 0.05);
             --glass-border: rgba(255, 255, 255, 0.1);
@@ -153,7 +153,7 @@
 
         /* --- Section 2: Verse --- */
         .verse-container {
-            background: var(--glass);
+            background: rgba(252, 241, 243, 0.05);
             backdrop-filter: blur(10px);
             border: 1px solid var(--glass-border);
             padding: 3rem 2rem;
@@ -422,10 +422,7 @@
                         <p id="groom-father"></p>
                         <p id="groom-mother"></p>
                     </div>
-                    <div class="parent-info" style="margin-top: 1rem;">
-                        <span class="parent-label">Family</span>
-                        <div id="groom-siblings" style="font-size: 0.95rem; line-height: 1.5; opacity: 0.9;"></div>
-                    </div>
+
                 </div>
 
                 <!-- Bride -->
@@ -438,10 +435,7 @@
                         <p id="bride-father"></p>
                         <p id="bride-mother"></p>
                     </div>
-                    <div class="parent-info" style="margin-top: 1rem;">
-                        <span class="parent-label">Family</span>
-                        <div id="bride-siblings" style="font-size: 0.95rem; line-height: 1.5; opacity: 0.9;"></div>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -472,7 +466,7 @@
             <div class="reveal-on-scroll">
                 <h3 style="font-family: 'Satisfy', cursive; font-size: 3rem; color: var(--gold); margin-bottom: 1.5rem;">See you there!</h3>
                 <p style="letter-spacing: 5px; text-transform: uppercase; opacity: 0.6;">Warm Regards</p>
-                <div id="footer-families" style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8; line-height: 1.8;"></div>
+                <div id="footer-families" style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8; line-height: 1.8; color: var(--gold-light);"></div>
             </div>
         </section>
     </main>
@@ -518,13 +512,11 @@
             document.getElementById('groom-house').textContent = WEDDING_DATA.groom.house;
             document.getElementById('groom-father').textContent = WEDDING_DATA.groom.father;
             document.getElementById('groom-mother').textContent = WEDDING_DATA.groom.mother;
-            document.getElementById('groom-siblings').innerHTML = WEDDING_DATA.groom.siblings.join('<br>');
 
             document.getElementById('bride-name').textContent = WEDDING_DATA.bride.lastName ? `${WEDDING_DATA.bride.firstName} ${WEDDING_DATA.bride.lastName}` : WEDDING_DATA.bride.firstName;
             document.getElementById('bride-house').textContent = WEDDING_DATA.bride.house;
             document.getElementById('bride-father').textContent = WEDDING_DATA.bride.father;
             document.getElementById('bride-mother').textContent = WEDDING_DATA.bride.mother;
-            document.getElementById('bride-siblings').innerHTML = WEDDING_DATA.bride.siblings.join('<br>');
 
             document.getElementById('event-date-full').textContent = WEDDING_DATA.event.dateFull;
             document.getElementById('event-time').textContent = WEDDING_DATA.event.time;
